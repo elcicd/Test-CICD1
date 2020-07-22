@@ -1,0 +1,25 @@
+- op: add
+  path: /objects/0/spec/template/spec/containers/0/env
+  value:
+    - name: password
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: test-cicd1-sealed-secret
+    - name: topicname
+      valueFrom:
+        configMapKeyRef:
+          key: topicname
+          name: ${APP_NAME}-configmap
+    - name: cgroup
+      valueFrom:
+        configMapKeyRef:
+          key: cgroup
+          name: ${APP_NAME}-configmap
+- op: add
+  path: /parameters/0
+  value:
+    description: test param
+    displayName: Test var
+    name: TEST_VAR
+    required: true

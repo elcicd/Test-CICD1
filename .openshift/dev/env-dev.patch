@@ -1,0 +1,37 @@
+kind: DeploymentConfig
+metadata:
+  name: ${APP_NAME}
+spec:
+  template:
+    spec:
+      containers:
+        - name: '${APP_NAME}'
+          env:
+          - name: password
+            valueFrom:
+              secretKeyRef:
+                key: password
+                name: test-cicd1-sealed-secret
+          - name: topicname
+            valueFrom:
+              configMapKeyRef:
+                key: topicname
+                name: ${APP_NAME}-configmap
+          - name: cgroup
+            valueFrom:
+              configMapKeyRef:
+                key: cgroup
+                name: ${APP_NAME}-configmap
+          - name: patchOverride
+            valueFrom:
+              configMapKeyRef:
+                key: patchOverride
+                name: ${APP_NAME}-configmap
+          volumeMounts:
+          - mountPath: /mnt
+            name: configmap-file
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: test-cicd1-cm-mount
+        name: configmap-file
