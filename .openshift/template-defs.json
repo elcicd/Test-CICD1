@@ -3,12 +3,12 @@
     {
       "file": "dc-svc-template.yaml",
       "templateName": "dc-svc-template",
-      "patchFile": "patch.yml",
+      "patchFile": "patches/patch.yml",
       "params": {
         "SVC_PORT": 8081
       },
       "dev": {
-        "patchFile": "dev/patch.yml",
+        "patchFile": "patches/patch-dev.yml",
         "params": {
           "SVC_PORT": 9090,
           "TEST_VAR": "testing"
