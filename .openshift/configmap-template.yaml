@@ -4,7 +4,7 @@ labels:
   template: test-configmap-template
 message: "Deploying using templated resources"
 metadata:
-  name:  dc-svc-template
+  name:  configmap-template
 objects:
 - apiVersion: v1
   kind: ConfigMap

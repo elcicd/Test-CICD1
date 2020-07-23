@@ -34,7 +34,7 @@
       }
     },
     {
-      "appName": "test-cicd1-configmap",
+      "appName": "ktest-cicd1-configmap",
       "file": "configmap-template.yaml",
       "params": {
         "TOPIC_NAME": "A topic"
