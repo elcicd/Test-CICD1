@@ -8,7 +8,7 @@
         "SVC_PORT": 8081
       },
       "dev": {
-        "patchFile": "kustomize-dev.patch",
+        "patchFile": "dev/kustomize-dev.patch",
         "params": {
           "SVC_PORT": 9090,
           "TEST_VAR": "testing dev"
