@@ -19,7 +19,7 @@
           "CPU_REQ": "200m",
           "MEM_REQ": "100Mi",
           "CPU_LIMIT": "1",
-          "MEM_LIMIT": "1Gi",,
+          "MEM_LIMIT": "1Gi",
           "TEST_VAR": "testing qa"
         }
       },
