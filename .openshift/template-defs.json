@@ -11,7 +11,7 @@
         "patchFile": "kustomize-dev.patch",
         "params": {
           "SVC_PORT": 9090,
-          "TEST_VAR": "testing"
+          "TEST_VAR": "testing dev"
         }
       },
       "qa": {
@@ -19,7 +19,8 @@
           "CPU_REQ": "200m",
           "MEM_REQ": "100Mi",
           "CPU_LIMIT": "1",
-          "MEM_LIMIT": "1Gi"
+          "MEM_LIMIT": "1Gi",,
+          "TEST_VAR": "testing qa"
         }
       },
       "prod": {
@@ -29,7 +30,7 @@
           "CPU_LIMIT": "1",
           "MEM_LIMIT": "1Gi",
           "SVC_PORT": 9090,
-          "TEST_VAR": "testing"
+          "TEST_VAR": "testing prod"
         }
       }
     },
