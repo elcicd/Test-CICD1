@@ -1,55 +1,54 @@
 {
-  "templates": [
-    {
-      "file": "dc-svc-template.yaml",
-      "templateName": "dc-svc-template",
-      "patchFile": "kustomize.patch",
-      "params": {
-        "SVC_PORT": 8081
-      },
-      "dev": {
-        "patchFile": "dev/kustomize-dev.patch",
-        "params": {
-          "SVC_PORT": 9090,
-          "TEST_VAR": "testing dev"
-        }
-      },
-      "qa": {
-        "params": {
-          "CPU_REQ": "200m",
-          "MEM_REQ": "100Mi",
-          "CPU_LIMIT": "1",
-          "MEM_LIMIT": "1Gi",
-          "TEST_VAR": "testing qa"
-        }
-      },
-      "prod": {
-        "params": {
-          "CPU_REQ": "200m",
-          "MEM_REQ": "100Mi",
-          "CPU_LIMIT": "1",
-          "MEM_LIMIT": "1Gi",
-          "SVC_PORT": 9090,
-          "TEST_VAR": "testing prod"
-        }
-      }
-    },
-    {
-      "appName": "ktest-cicd1-configmap",
-      "file": "configmap-template.yaml",
-      "params": {
-        "TOPIC_NAME": "A topic"
-      },
-      "dev": {
-        "params": {
-          "TOPIC_NAME": "A dev topic"
-        }
-      },
-      "qa": {
-        "params": {
-          "TOPIC_NAME": "qa topic"
-        }
-      }
-    }
-  ]
+	"templates": [{
+			"file": "dc-svc-template.yaml",
+			"templateName": "dc-svc-template",
+			"patchFile": "kustomize.patch",
+			"params": {
+				"SVC_PORT": 8081
+			},
+			"dev": {
+				"patchFile": "dev/kustomize-dev.patch",
+				"params": {
+					"SVC_PORT": 9090,
+					"TEST_VAR": "testing dev"
+				}
+			},
+			"qa": {
+				"params": {
+					"CPU_REQ": "200m",
+					"MEM_REQ": "100Mi",
+					"CPU_LIMIT": "1",
+					"MEM_LIMIT": "1Gi",
+					"TEST_VAR": "testing qa"
+				}
+			},
+			"prod": {
+				"params": {
+					"CPU_REQ": "200m",
+					"MEM_REQ": "100Mi",
+					"CPU_LIMIT": "1",
+					"MEM_LIMIT": "1Gi",
+					"SVC_PORT": 9090,
+					"TEST_VAR": "testing prod"
+				}
+			}
+		},
+		{
+			"appName": "test-cicd1-configmap",
+			"file": "configmap-template.yaml",
+			"params": {
+				"TOPIC_NAME": "A topic"
+			},
+			"dev": {
+				"params": {
+					"TOPIC_NAME": "A dev topic"
+				}
+			},
+			"qa": {
+				"params": {
+					"TOPIC_NAME": "qa topic"
+				}
+			}
+		}
+	]
 }
