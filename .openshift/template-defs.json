@@ -22,6 +22,9 @@
 					"TEST_VAR": "testing qa"
 				}
 			},
+            "stg": {
+                   "TEST_VAR": "testing qa"
+            }
 			"prod": {
 				"params": {
 					"CPU_REQ": "200m",
