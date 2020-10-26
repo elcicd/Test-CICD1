@@ -35,3 +35,19 @@
         defaultMode: 420
         name: test-cicd1-cm-mount
       name: configmap-file
+
+- op: add
+  path: /parameters/0
+  value:
+    description: test param
+    displayName: Test var
+    name: TEST_VAR
+    required: true
+
+- op: add
+  path: /parameters/0
+  value:
+    description: test param 2
+    displayName: Test var 2
+    name: TEST_VAR_2
+    required: true
