@@ -11,7 +11,8 @@
                 "patchFile": "dev/kustomize-dev.patch",
                 "params": {
                     "SVC_PORT": 9090,
-                    "TEST_VAR": "testing dev"
+                    "TEST_VAR": "testing dev",
+                    "TEST_VAR_2": "testing dev 2"
                 }
             },
             "qa": {
