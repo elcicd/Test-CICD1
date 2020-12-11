@@ -1,7 +1,6 @@
 {
     "templates": [
         {
-            "file": "dc-svc-template.yaml",
             "templateName": "dc-svc-template",
             "patchFile": "kustomize.patch",
             "params": {
