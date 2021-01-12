@@ -9,7 +9,7 @@ class x():
     enbid = None
     @staticmethod
     def someMethod():
-        print("Testing")
+        print("Testing change 1")
 
 def main():
     """
